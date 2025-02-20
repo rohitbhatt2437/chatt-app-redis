@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { Popover, PopoverTrigger } from '../ui/popover'
-import { SmileIcon } from 'lucide-react'
-import { PopoverContent } from '@radix-ui/react-popover'
+"use client";
+
+import { SmileIcon } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import Picker from "@emoji-mart/react";
-import data from "@emoji-mart/data"
-import { useTheme } from 'next-themes';
+import data from "@emoji-mart/data";
+import { useTheme } from "next-themes";
 
 interface EmojiPickerProps {
 	onChange: (emoji: string) => void;
 }
 
-const EmojiPicker = ({onChange}:EmojiPickerProps) => {
-  const { theme } = useTheme();
+const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
+	const { theme } = useTheme();
 
 	return (
 		<Popover>
@@ -30,4 +30,4 @@ const EmojiPicker = ({onChange}:EmojiPickerProps) => {
 		</Popover>
 	);
 };
-export default EmojiPicker
+export default EmojiPicker;
